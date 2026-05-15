@@ -1,227 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Happy Birthday 🤍</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayang & Kasa</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-body{
-    background: linear-gradient(to bottom, #0f0f1a, #1d1d33);
-    color:white;
-    overflow-x:hidden;
-}
+    body{
+      background:black;
+      overflow:hidden;
+      color:white;
+      height:100vh;
+    }
 
-.container{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:30px;
-}
+    .stars{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:url('https://i.imgur.com/YKY28eT.png');
+      animation:moveStars 90s linear infinite;
+      opacity:0.4;
+    }
 
-h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
+    @keyframes moveStars{
+      from{transform:translateY(0);}
+      to{transform:translateY(-1000px);}
+    }
 
-.subtitle{
-    opacity:0.8;
-    margin-bottom:30px;
-}
+    .container{
+      position:relative;
+      z-index:2;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
 
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius:25px;
-    padding:30px;
-    max-width:700px;
-    box-shadow:0 0 25px rgba(255,255,255,0.08);
-}
+    .guitar{
+      font-size:90px;
+      animation:float 3s ease-in-out infinite;
+      margin-bottom:20px;
+    }
 
-.message{
-    line-height:1.8;
-    font-size:1rem;
-}
+    @keyframes float{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-15px);}
+    }
 
-.section{
-    margin-top:35px;
-}
+    h1{
+      font-size:3rem;
+      margin-bottom:10px;
+      text-shadow:0 0 20px white;
+    }
 
-.love-list{
-    list-style:none;
-    margin-top:15px;
-}
+    p{
+      max-width:700px;
+      line-height:1.8;
+      opacity:0;
+      animation:fadeIn 3s forwards;
+      animation-delay:1s;
+      font-size:1rem;
+    }
 
-.love-list li{
-    margin:10px 0;
-}
+    @keyframes fadeIn{
+      to{opacity:1;}
+    }
 
-button{
-    margin-top:30px;
-    padding:14px 28px;
-    border:none;
-    border-radius:30px;
-    background:white;
-    color:#111;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
+    .btn{
+      margin-top:30px;
+      padding:14px 30px;
+      border:none;
+      border-radius:40px;
+      background:white;
+      color:black;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 0 20px white;
+    }
 
-button:hover{
-    transform:scale(1.05);
-}
+    .btn:hover{
+      transform:scale(1.08);
+    }
 
-.hidden-message{
-    display:none;
-    margin-top:25px;
-    font-size:1.2rem;
-    animation:fadeIn 1s ease;
-}
+    .love{
+      position:absolute;
+      color:white;
+      font-size:20px;
+      animation:fall linear forwards;
+      top:-10px;
+    }
 
-@keyframes fadeIn{
-    from{
+    @keyframes fall{
+      to{
+        transform:translateY(110vh);
         opacity:0;
-        transform:translateY(10px);
+      }
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+    .musicText{
+      margin-top:20px;
+      font-size:0.9rem;
+      opacity:0.7;
     }
-}
 
-.stars{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    overflow:hidden;
-    z-index:-1;
-}
+    @media(max-width:600px){
+      h1{
+        font-size:2rem;
+      }
 
-.star{
-    position:absolute;
-    width:2px;
-    height:2px;
-    background:white;
-    border-radius:50%;
-    animation:twinkle 3s infinite;
-}
-
-@keyframes twinkle{
-    0%,100%{
-        opacity:0.2;
+      p{
+        font-size:0.9rem;
+      }
     }
-    50%{
-        opacity:1;
-    }
-}
-
-.footer{
-    margin-top:40px;
-    opacity:0.6;
-    font-size:0.9rem;
-}
-</style>
+  </style>
 </head>
-
 <body>
 
 <div class="stars"></div>
 
 <div class="container">
+  <div class="guitar">🎸</div>
 
-    <div class="card">
+  <h1>Sayang Kasa</h1>
 
-        <h1>Happy Birthday 🤍</h1>
+  <p>
+    Terima kasih karena udah nemenin Sara sejauh ini, bahkan di hari-hari yang mungkin kelihatannya biasa aja. Makasih juga karena selalu ingat hal-hal kecil tentang hidup Sara, hal yang kadang orang lain lewatkan justru selalu kamu ingat. Kehadiran kamu berharga dan sara beruntung bisa memiliki kamu sebagai pria yang nantinya hidup sama aku sampai jadi debu.
+    <br><br>
+    I love you more than you know 
+  </p>
 
-        <p class="subtitle">
-            for the person i love the most
-        </p>
+  <button class="btn" onclick="playMusic()">
+    ▶ Play Our Song
+  </button>
 
-        <div class="message">
-            Maaf karena aku lupa hari yang harusnya paling aku inget <br><br>
-
-            Tapi bukan berarti aku lupa
-            seberapa berharganya kamu buat aku.<br><br>
-
-            Makasih udah selalu ada buat sara,
-            nemenin sara tiap hari,
-            dan tetap sabar walaupun kita lagi jauh.<br><br>
-
-            Aku berharap tahun ini
-            semua hal baik datang ke kamu 🤍
-        </div>
-
-        <div class="section">
-            <h2>Things I Love About You</h2>
-
-            <ul class="love-list">
-                <li>🤍 cara kamu manggil aku</li>
-                <li>🤍 muka kamu yang lucu</li>
-                <li>🤍 sikap sabar kamu sama sara</li>
-                <li>🤍 kamu yang selalu nemenin sara</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <p>
-                “Walaupun kita lagi ldr dan belum bisa ketemu,
-                aku tetap berharap suatu hari nanti
-                aku bisa rayain ulang tahun kamu langsung.”
-            </p>
-        </div>
-
-        <button onclick="showMessage()">
-            one more thing...
-        </button>
-
-        <div class="hidden-message" id="hiddenMessage">
-            I love you more than you know 🤍
-            More than my words can explain,
-    more than this distance can change,
-    and more than I manage to show sometimes 🤍
-        </div>
-
-        <div class="footer">
-            made with love ✨
-        </div>
-
-    </div>
-
+  <div class="musicText">
+     sampai jadi debu 🎶
+  </div>
 </div>
 
+<audio id="song" loop>
+  <source src="YOUR-MUSIC-LINK.mp3" type="audio/mpeg">
+</audio>
+
 <script>
-function showMessage(){
-    document.getElementById("hiddenMessage").style.display = "block";
-}
+  function playMusic(){
+    document.getElementById('song').play();
+  }
 
-const starsContainer = document.querySelector('.stars');
+  function createLove(){
+    const love = document.createElement('div');
+    love.classList.add('love');
+    love.innerHTML = '♡';
+    love.style.left = Math.random() * window.innerWidth + 'px';
+    love.style.animationDuration = 3 + Math.random() * 5 + 's';
+    document.body.appendChild(love);
 
-for(let i = 0; i < 100; i++){
-    let star = document.createElement('div');
-    star.classList.add('star');
+    setTimeout(()=>{
+      love.remove();
+    },8000);
+  }
 
-    star.style.top = Math.random() * 100 + '%';
-    star.style.left = Math.random() * 100 + '%';
-
-    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-
-    starsContainer.appendChild(star);
-}
+  setInterval(createLove,300);
 </script>
 
 </body>
